@@ -19,7 +19,6 @@ int StartOff = 180; //Set the start offtime in minute of day (90 -> 1:30, 120 ->
 int EndOff = 300; //Set the end offtime in minute of day (240 -> 04:00, 270 -> 04:30, 300 -> 05:00, 330 -> 05:30)
 int del = 10; //Set the delay change time in minute of day
 
-//const int TIMEZONE = +2; //PST
 const float LATITUDE = 40.724083, LONGITUDE = 22.907523; // set your GPS position here
 int mSunrise, mSunset, mSunriseD, mSunsetD, minOfDay, tizo; //sunrise and sunset expressed as minute of day (0-1439)
 int hourNow, minNow, hourLast = -1, minLast = -1;
@@ -73,11 +72,6 @@ unsigned int localPort = 8888;  // local port to listen for UDP packets
 
 time_t getNtpTime();
 time_t prevDisplay = 0; // when the digital clock was displayed
-//void digitalClockDisplay();
-//void printDigits(int digits);
-//void sendNTPpacket(IPAddress &address);
-//void print2digits(int number);
-
 
 // NTP end *****************************************************
 
@@ -115,16 +109,11 @@ unsigned long previousTime = 0;
 // Define timeout time in milliseconds (example: 2000ms = 2s)
 const long timeoutTime = 2000;
 
-
-//const char* ssid     = "2.4GHz";
-//const char* password = "753ii951";    
-//IPAddress local_IP(10, 10, 11, 77); // Set your Static IP address  Upper  Router   
-//IPAddress gateway(10, 10, 11, 1);   // Set your Gateway IP address
    
-const char* ssid     = "2.44GHz";
-const char* password = "951ii753";
-IPAddress local_IP(192, 168, 1, 77); // Set your Static IP address  Down  Router   
-IPAddress gateway(192, 168, 1, 1);   // Set your Gateway IP address
+const char* ssid     = "*********";
+const char* password = "*********";
+IPAddress local_IP(192, 168, 0, 22); // Set your Static IP address  Down  Router   
+IPAddress gateway(192, 168, 0, 1);   // Set your Gateway IP address
 
 IPAddress subnet(255, 255, 255, 0);
 IPAddress primaryDNS(8, 8, 8, 8);   //optional
